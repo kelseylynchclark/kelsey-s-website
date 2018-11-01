@@ -1,4 +1,7 @@
 <html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
 <body>
 <h1 style="color:violet;">About me</h1>
 <ul>
@@ -24,7 +27,14 @@
 
 </body>
 <a href="https://www.prettylittlething.com/"> this is a website i use all the time to buy my clothes</a>
+<i class="material-icons">favorite</i>
+<h1>live love life</h1>
+<div>
+  <button onclick="quoteGenerator()"> Click here for some daily love,support and insperation</button>
+  <p id="quote"></p>
+</div>
 </html>
+
 <style>
 .myimage {
   height:100px;
@@ -32,23 +42,16 @@
 body {
     background-image: url("background 2.png");
 }
-</style>
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-</head>
-<body>
-<i class="material-icons">favorite</i>
-<!DOCTYPE html>
-<html>
-<head>
-<style>
 h1 {
     text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
 }
 </style>
-</head>
-<body>
+<script>
+function quoteGenerator(){
+  var quotes=["A drean is a wish your heart makes","What doesn't kill you makes you stonger","Don't cry because it's over, smile because it happened","Be yourself; everyone else is already taken","You know you're in love when you can't fall asleep because reality is finally better than your dreams","You only live once, but if you do it right, once is enough","Be the change that you wish to see in the world","No one can make you feel inferior without your consent","A friend is someone who knows all about you and still loves you","Always forgive your enemies; nothing annoys them so much","Happiness can be found even in the darkest of times, if one only remembers to turn on the light","Not all those who wander are lost"]
+  var random=Math.floor(Math.random()*quotes.length)
+  var quoteElement=document.getElementById("quote")
+  quoteElement.innerHTML=quotes[random]
+}
 
-<h1>love laugh life</h1>
+</script>
